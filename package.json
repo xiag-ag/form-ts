@@ -21,9 +21,9 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "version:patch": "lerna version --no-changelog --no-push patch",
-    "version:minor": "lerna version --no-changelog --no-push minor",
-    "version:major": "lerna version --no-changelog --no-push major",
+    "version:patch": "lerna version --no-changelog patch",
+    "version:minor": "lerna version --no-changelog minor",
+    "version:major": "lerna version --no-changelog major",
     "start": "run-p --silent --continue-on-error 'start:core' 'start:react' 'start:demo'",
     "start:core": "yarn workspace '@form-ts/core' run watch",
     "start:react": "yarn workspace '@form-ts/react' run watch",

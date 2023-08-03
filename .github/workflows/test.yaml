@@ -1,0 +1,30 @@
+name: Test
+on:
+  - push
+  - pull_request
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Install
+        run: yarn install --silent --frozen-lockfile --non-interactive
+      - name: Lint "core"
+        run: yarn run --silent lint:core
+      - name: Check "core"
+        run: yarn run --silent check:core
+      - name: Build "core"
+        run: yarn run --silent build:core
+      - name: Lint "react"
+        run: yarn run --silent lint:react
+      - name: Check "react"
+        run: yarn run --silent check:react
+      - name: Build "react"
+        run: yarn run --silent build:react
+      - name: Lint "demo"
+        run: yarn run --silent lint:demo
+      - name: Check "demo"
+        run: yarn run --silent check:demo
+      - name: Build "demo"
+        run: yarn run --silent build:demo

@@ -1,0 +1,28 @@
+{
+  "name": "@form-ts/core",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "files": [
+    "lib/*"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "watch": "tsc --project ./tsconfig.json --watch --pretty",
+    "build": "tsc --project ./tsconfig.json --noEmitOnError --pretty",
+    "check": "tsc --project ./tsconfig.json --noEmit --pretty",
+    "test": "cross-env TZ=UTC TS_NODE_TRANSPILE_ONLY=true TS_NODE_FILES=true jest --runInBand --colors",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "fp-ts": "^2.5.0",
+    "monocle-ts": "^2.0.0",
+    "shallow-clone": "^3.0.0",
+    "typescript-memoize": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/shallow-clone": "^3.0.0",
+    "typescript": "^5.1.6"
+  }
+}

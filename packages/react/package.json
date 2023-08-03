@@ -1,0 +1,26 @@
+{
+  "name": "@form-ts/react",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "files": [
+    "lib/*"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "watch": "tsc --project ./tsconfig.json --watch --pretty",
+    "build": "tsc --project ./tsconfig.json --noEmitOnError --pretty",
+    "check": "tsc --project ./tsconfig.json --noEmit --pretty",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "@form-ts/core": "0.0.0",
+    "@form-ts/react": "0.0.0",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "typescript": "^5.1.6"
+  }
+}

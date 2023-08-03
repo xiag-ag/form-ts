@@ -1,0 +1,138 @@
+module.exports = {
+    root: true,
+    env: {
+        browser: false,
+        node: true,
+        es6: true,
+    },
+    plugins: [
+        'react',
+        'import',
+        '@typescript-eslint',
+    ],
+    extends: [
+        'airbnb',
+        'airbnb/hooks',
+    ],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        project: ['./tsconfig.json'],
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 2018,
+        sourceType: 'module',
+    },
+    overrides: [
+        {
+            files: ['*.ts', '*.tsx', '*.mts'],
+            parserOptions: {
+                project: './tsconfig.json',
+            },
+            extends: [
+                'airbnb-typescript',
+                'plugin:@typescript-eslint/recommended',
+                'plugin:@typescript-eslint/recommended-requiring-type-checking',
+            ],
+        },
+        {
+            files: ['*.ts', '*.tsx'],
+            rules: {
+                'import/prefer-default-export': 0,
+                'import/order': ['error', {
+                    alphabetize: {
+                        order: 'asc',
+                        caseInsensitive: true,
+                    },
+                    'newlines-between': 'never',
+                }],
+                'class-methods-use-this': 0,
+                'indent': ['error', 4],
+                'no-await-in-loop': 0,
+                'no-plusplus': 0,
+                'no-tabs': ['error'],
+                'curly': ['error', 'all'],
+                'object-curly-newline': 0,
+                'max-len': ['error', {
+                    code: 120,
+                    ignoreComments: true,
+                }],
+                'no-param-reassign': ['error'],
+                'no-bitwise': ['error'],
+                'no-continue': 0,
+                'no-nested-ternary': 0,
+                'no-restricted-imports': 0,
+                'no-restricted-syntax': ['error', 'WithStatement', 'ForInStatement'],
+                'no-underscore-dangle': ['error', {
+                    allow: ['__typename'],
+                }],
+                'object-shorthand': ['error', 'consistent-as-needed'],
+                'operator-linebreak': ['error', 'after', {
+                    overrides: { '?': 'before', ':': 'before' },
+                }],
+                'quotes': ['error', 'single', { 'avoidEscape': true }],
+                'func-names': ['error'],
+                'func-style': 0,
+                'import/no-extraneous-dependencies': 0,
+                'jsx-quotes': ['error', 'prefer-double'],
+                'jsx-a11y/label-has-associated-control': ['error', {
+                    labelComponents: ['CustomInputLabel'],
+                    labelAttributes: ['label'],
+                    controlComponents: ['CustomInput'],
+                    depth: 3,
+                }],
+                'arrow-body-style': 0,
+                'react/jsx-boolean-value': ['error', 'always'],
+                'react/jsx-indent': ['error', 4],
+                'react/jsx-one-expression-per-line': 0,
+                'react/jsx-props-no-spreading': 0,
+                'react/jsx-fragments': ['error', 'syntax'],
+                'react/jsx-indent-props': ['error', 4],
+                'react/jsx-tag-spacing': ['error', {
+                    'closingSlash': 'never',
+                    'beforeSelfClosing': 'never',
+                    'afterOpening': 'never',
+                    'beforeClosing': 'never',
+                }],
+                'react/require-default-props': 0,
+                'react/prop-types': 0,
+                'react/sort-comp': 0,
+                'react/state-in-constructor': ['error', 'never'],
+                'react/function-component-definition': ['error', {
+                    namedComponents: 'function-declaration',
+                    unnamedComponents: 'arrow-function',
+                }],
+                '@typescript-eslint/brace-style': ['error'],
+                '@typescript-eslint/indent': ['error', 4],
+                '@typescript-eslint/explicit-member-accessibility': ['error'],
+                '@typescript-eslint/explicit-function-return-type': ['error'],
+                '@typescript-eslint/lines-between-class-members': 0,
+                '@typescript-eslint/no-use-before-define': 0,
+                '@typescript-eslint/no-useless-constructor': ['error'],
+                '@typescript-eslint/member-delimiter-style': ['error', {
+                    multiline: {
+                        delimiter: 'semi',
+                        requireLast: true,
+                    },
+                    singleline: {
+                        delimiter: 'semi',
+                        requireLast: false,
+                    },
+                }],
+                '@typescript-eslint/no-empty-function': ['error'],
+                '@typescript-eslint/consistent-type-assertions': ['error', {
+                    assertionStyle: 'never',
+                }],
+                '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+                '@typescript-eslint/no-unused-vars': 0,
+                '@typescript-eslint/unbound-method': 0,
+            },
+        },
+    ],
+    ignorePatterns: [
+        'dist/*',
+        'types/*',
+        'static/*',
+        'node_modules/*',
+    ],
+};

@@ -1,7 +1,7 @@
 {
   "name": "@form-ts/react",
   "description": "",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "files": [
     "lib/*"
@@ -18,7 +18,7 @@
     "lint": "eslint src/"
   },
   "dependencies": {
-    "@form-ts/core": "0.0.0",
+    "@form-ts/core": "0.0.1",
     "@form-ts/react": "0.0.0",
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },

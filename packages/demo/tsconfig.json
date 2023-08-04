@@ -16,6 +16,7 @@
     "lib": ["ES2019", "DOM"],
     "skipLibCheck": true,
     "sourceMap": true,
+    "inlineSources": true,
     "noEmit": true
   },
   "include": [

@@ -12,6 +12,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
+    "clean": "rimraf lib/",
     "watch": "tsc --project ./tsconfig.json --watch --pretty",
     "build": "tsc --project ./tsconfig.json --noEmitOnError --pretty",
     "check": "tsc --project ./tsconfig.json --noEmit --pretty",

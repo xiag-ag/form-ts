@@ -4,6 +4,7 @@
   "version": "0.0.2",
   "private": "true",
   "scripts": {
+    "clean": "rimraf lib/",
     "watch": "vite --port 9000",
     "build": "vite build --outDir lib/",
     "check": "tsc --project ./tsconfig.json --noEmit --pretty",

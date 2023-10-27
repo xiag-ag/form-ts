@@ -1,7 +1,7 @@
 {
   "name": "@form-ts/demo",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "private": "true",
   "scripts": {
     "clean": "rimraf lib/",
@@ -11,8 +11,8 @@
     "lint": "eslint src/"
   },
   "dependencies": {
-    "@form-ts/core": "0.0.3",
-    "@form-ts/react": "0.0.3",
+    "@form-ts/core": "0.1.0",
+    "@form-ts/react": "0.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -45,4 +45,7 @@ const DEFAULT_FORM_META: FormMeta = {
     submitted: false,
     submitting: false,
     validating: false,
+
+    submitCount: 0,
+    submitSucceded: false,
 };

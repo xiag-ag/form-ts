@@ -3,6 +3,8 @@ import {
     formChanged,
     formErrors,
     formMeta,
+    formSubmitCount,
+    formSubmitSucceded,
     formSubmitted,
     formSubmitting,
     formTouched,
@@ -29,6 +31,8 @@ export class FormController<TData, TError> {
     public readonly submitted: L.Lens<FormState<TData, TError>, boolean> = formSubmitted<TData, TError>();
     public readonly submitting: L.Lens<FormState<TData, TError>, boolean> = formSubmitting<TData, TError>();
     public readonly validating: L.Lens<FormState<TData, TError>, boolean> = formValidating<TData, TError>();
+    public readonly submitCount: L.Lens<FormState<TData, TError>, number> = formSubmitCount<TData, TError>();
+    public readonly submitSucceded: L.Lens<FormState<TData, TError>, boolean> = formSubmitSucceded<TData, TError>();
 
     private current: FormState<TData, TError>;
     private initial: FormState<TData, TError>;

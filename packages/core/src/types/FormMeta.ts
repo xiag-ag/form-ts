@@ -5,4 +5,7 @@ export type FormMeta = {
     readonly submitted: boolean;
     readonly submitting: boolean;
     readonly validating: boolean;
+
+    readonly submitCount: number;
+    readonly submitSucceded: boolean;
 };

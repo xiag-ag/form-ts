@@ -32,6 +32,14 @@ export function formValidating<TData, TError>(): L.Lens<FormState<TData, TError>
     return pipe(formMeta<TData, TError>(), L.prop('validating'));
 }
 
+export function formSubmitSucceded<TData, TError>(): L.Lens<FormState<TData, TError>, boolean> {
+    return pipe(formMeta<TData, TError>(), L.prop('submitSucceded'));
+}
+
+export function formSubmitCount<TData, TError>(): L.Lens<FormState<TData, TError>, number> {
+    return pipe(formMeta<TData, TError>(), L.prop('submitCount'));
+}
+
 export function formValues<TData, TError>(): L.Lens<FormState<TData, TError>, TData> {
     const form = L.id<FormState<TData, TError>>();
     return pipe(form, L.prop('values'));

@@ -7,5 +7,5 @@ export function useFormWatch<TData, TError, TValue>(
 ): TValue {
     const getter = useCallback(() => selector(form.currentState), [form, selector]);
     const subscribe = useCallback((cb: () => void) => form.subscribe(cb), [form]);
-    return useSyncExternalStore(subscribe, getter);
+    return useSyncExternalStore(subscribe, getter, getter);
 }

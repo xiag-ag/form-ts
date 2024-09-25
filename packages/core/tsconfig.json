@@ -18,7 +18,7 @@
     "sourceMap": true,
     "inlineSources": true,
     "declaration": true,
-    "outDir": "./lib"
+    "outDir": "./es6"
   },
   "include": [
     "src/**/*.ts"

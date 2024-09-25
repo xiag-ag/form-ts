@@ -1,7 +1,7 @@
 {
   "name": "@form-ts/demo",
   "description": "",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": "true",
   "scripts": {
     "clean": "rimraf lib/",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@form-ts/core": "0.2.1",
-    "@form-ts/react": "0.2.1",
+    "@form-ts/react": "0.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
